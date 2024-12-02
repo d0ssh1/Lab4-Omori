@@ -1,0 +1,77 @@
+header {
+    width: 100%;
+    text-align: center;
+    background-image: url("omori_header.jpg");
+    background-size: cover;
+}
+
+header div div, .header_name {
+    font-weight: bold;
+    font-family: "Graphik Medium", sans-serif;
+    background-color: gainsboro;
+    padding: 5px;
+    border-radius: 5px;
+    opacity: 0.9;
+    text-shadow: 0 0 10px white;
+    display: inline-block;
+    text-align: center;
+}
+
+header div {
+    margin: 10px;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+    justify-content: center;
+}
+
+.article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: solid black 1px;
+    padding: 10px;
+    width: 47%;
+}
+
+.article h2, .article p {
+    text-align: center;
+    font-family: "Graphik Medium", sans-serif;
+}
+
+.article p {
+    grid-column: 1/3;
+}
+
+.article img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 800px) {
+    .article {
+        width: 100%;
+    }
+    header {
+        background-image: none;
+    }
+    .menu {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .header_name {
+        display: none;
+    }
+}
